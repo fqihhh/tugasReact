@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Featured from "./components/Featured";
 import Linkedin from "./components/Linkedin";
 import Footer from "./components/Footer";
+import Certivicate from "./components/Certivicate";
 
 function App() {
   return (
@@ -10,8 +11,10 @@ function App() {
       <Navbar />
       <Hero />
       <Featured />
+      <Certivicate />
       <Linkedin />
       <Footer />
+    
     </> 
   );
 }
