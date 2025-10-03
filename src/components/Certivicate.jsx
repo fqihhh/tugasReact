@@ -1,6 +1,7 @@
 import gambar from "../assets/cert1.png";
 import gambar1 from "../assets/cert2.png";
 import gambar2 from "../assets/cert3.png";
+import gambar3 from "../assets/cert4.png";
 
 const Certivicate = () => {
   return (
@@ -25,8 +26,14 @@ const Certivicate = () => {
             className="slide-certificate absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-1000 ease-in-out"
             alt="Sertifikat 3"
           />
+          <img
+            src={gambar3}
+            className="slide-certificate absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-1000 ease-in-out"
+            alt="Sertifikat 4"
+          />
         </div>
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+          <span className="dot-certificate w-3 h-3 rounded-full bg-white/40"></span>
           <span className="dot-certificate w-3 h-3 rounded-full bg-white/40"></span>
           <span className="dot-certificate w-3 h-3 rounded-full bg-white/40"></span>
           <span className="dot-certificate w-3 h-3 rounded-full bg-white/40"></span>

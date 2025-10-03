@@ -4,7 +4,7 @@ import Featured from "./components/Featured";
 import Linkedin from "./components/Linkedin";
 import Footer from "./components/Footer";
 import Certivicate from "./components/Certivicate";
-import Galery from "./components/Galery";
+import Galery from "./components/Galery";           
 
 function App() {
   return (
