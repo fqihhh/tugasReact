@@ -1,8 +1,8 @@
-import gambar from "../assets/download-removebg-preview.png";
-import gambar1 from "../assets/bla.jpeg";
-import gambar2 from "../assets/blabla.png";
-import gambar3 from "../assets/blabli.png";
-import gambar4 from "../assets/bleble.png";
+import gambar from "../../assets/download-removebg-preview.png";
+import gambar1 from "../../assets/bla.jpeg";
+import gambar2 from "../../assets/blabla.png";
+import gambar3 from "../../assets/blabli.png";
+import gambar4 from "../../assets/bleble.png";
 const Featured = () => {
   return (
     <div className="bg-[#2D2D06] text-white">

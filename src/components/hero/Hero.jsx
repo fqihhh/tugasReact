@@ -1,4 +1,4 @@
-import gambar1 from "../assets/download-removebg-preview.png";
+import gambar1 from "../../assets/apa.jpg";
 const Hero = () => {
   return (
     <div className="bg-[#2D2D06] text-white">

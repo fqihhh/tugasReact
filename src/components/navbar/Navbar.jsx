@@ -1,4 +1,4 @@
-import gambar from "../assets/download-removebg-preview.png";
+import gambar from "../../assets/download-removebg-preview.png";
 import { useEffect } from "react";
 
 const Navbar = () => {

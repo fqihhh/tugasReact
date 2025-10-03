@@ -1,4 +1,4 @@
-import gambar from "../assets/download-removebg-preview.png";
+import gambar from "../../assets/download-removebg-preview.png";
 const Footer = () => {
   return (
     <div className="bg-[#2D2D06] text-white">
@@ -37,7 +37,7 @@ const Footer = () => {
             <p className="text-sm mb-4">Dapatkan update proyek terbaru langsung ke email Anda.</p>
             <form className="flex flex-col sm:flex-row">
               <input type="email" placeholder="Email Anda"
-                className="px-4 py-2 rounded-md w-full text-black focus:outline-none mb-3 sm:mb-0 sm:rounded-l-md" />
+                className="text-white px-4 py-2 rounded-md w-full text-black focus:outline-none mb-3 sm:mb-0 sm:rounded-l-md" />
               <button type="submit"
                 className="bg-white text-[#680000] px-4 py-2 rounded-md sm:rounded-r-md hover:bg-gray-200 transition">
                 Kirim
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 py-6 text-center text-sm text-gray-400">
-          © <span id="year"></span> Fathi Dzahabi. Dibuat dengan TailwindCSS.
+          © <span id="year"></span> Arsyad Faqih Alhisyami. Dibuat dengan TailwindCSS.
         </div>
       </footer>
     </div>
