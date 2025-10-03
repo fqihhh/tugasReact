@@ -5,7 +5,7 @@ import gambar3 from "../assets/cert4.png";
 
 const Certivicate = () => {
   return (
-    <section id="certificate" className="py-16 bg-gray-50">
+    <section id="certificate" className="py-16" style={{ backgroundColor: "#2D2D06" }}>
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
         Sertifikat & Pencapaian
       </h1>
