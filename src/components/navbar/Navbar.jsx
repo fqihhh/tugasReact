@@ -1,4 +1,4 @@
-import gambar from "../../assets/download-removebg-preview.png";
+import gambar from "../../assets/AFA2.png";
 import { useEffect } from "react";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-[#2D2D06] text-white">
+    <div className="bg-[#0E0B0C] text-white">
       <header className="flex justify-between items-center px-6 py-4 relative">
         <img src={gambar} alt="Logo" className="w-16 md:w-20" />
         <button

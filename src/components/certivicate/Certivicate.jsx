@@ -32,9 +32,9 @@ const Certivicate = () => {
   }, []);
 
   return (
-    <section id="certificate" className="py-16 bg-[#2D2D06]">
+    <section id="certificate" className="py-16 bg-[#0E0B0C]">
       <h1 className="text-3xl font-bold text-center mb-8 text-white">
-        Sertifikat & Pencapaian
+      CERTIFICATES & ACHIEVEMENTS
       </h1>
 
       <div className="relative max-w-2xl mx-auto overflow-hidden rounded-lg shadow-lg">

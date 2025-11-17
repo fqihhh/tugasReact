@@ -1,21 +1,44 @@
-import gambar1 from "../../assets/apa.jpg";
+import gambar1 from "../../assets/Selected.png";
+import gambar2 from "../../assets/Portfolio.png";
 const Hero = () => {
   return (
-    <div className="bg-[#2D2D06] text-white">
-      <section className="flex flex-col md:flex-row items-center px-6 md:px-20 py-10 md:py-20 text-center md:text-left">
-        <div className="flex-1 space-y-4">
-          <h1 className="text-3xl md:text-5xl font-bold">Halo, Gw</h1>
-          <h1 className="text-3xl md:text-5xl font-bold">Arsyad Faqih Alhisyami</h1>
-          <p>ini portofolio</p>
-          <button className="bg-white text-black px-6 py-2 font-semibold hover:bg-gray-200 rounded-lg">
-            Call Me
-          </button>
+    <section className="w-full min-h-screen bg-black flex items-center justify-center px-6">
+      <div className="text-center">
+
+        {/* Tahun */}
+        <p className="text-gray-300 tracking-widest text-sm mb-6">
+          2024 — 2025
+        </p>
+
+        {/* Selected (diganti gambar) */}
+        <div className="flex justify-center mb-4 mr-55">
+          <img 
+            src={gambar1} 
+            alt="Selected" 
+            className="w-[180px] opacity-120 md:w-[300px]"
+          />
         </div>
-        <div className="flex-1 mt-6 md:mt-0">
-          <img src={gambar1} alt="Hero" className="w-full max-w-sm mx-auto md:max-w-md" />
+
+        {/* Portfolio (diganti gambar) */}
+        <div className="flex justify-center mb-6">
+          <img 
+            src={gambar2} 
+            alt="Portfolio" 
+            className="w-[600px] opacity-95"
+          />
         </div>
-      </section>
-    </div>
+
+        {/* Subtext */}
+        <p className="text-gray-400 text-xs tracking-widest">
+          BRAND IDENTITY DESIGN | SOCIAL MEDIA DESIGN | UI/UX DESIGN | GRAPHIC DESIGN
+        </p>
+
+        <p className="text-gray-400 text-xs tracking-widest mt-3">
+          PORTFOLIO BY: <span className="text-yellow-400">ARSYAD FAQIH ALHISYAMI</span>
+        </p>
+
+      </div>
+    </section>
   );
 };
 

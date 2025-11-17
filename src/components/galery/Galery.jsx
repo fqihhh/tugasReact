@@ -48,9 +48,9 @@ const Galery = () => {
   }, [images.length]);
 
   return (
-    <section id="gallery" className="py-16 bg-[#2D2D06] text-white">
+    <section id="gallery" className="py-16 bg-[#0E0B0C] text-white">
       <h1 className="text-3xl font-bold text-center mb-8">
-        Galeri Foto
+        PHOTO GALLERY
       </h1>
 
       <div className="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
