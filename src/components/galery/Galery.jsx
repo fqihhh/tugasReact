@@ -1,82 +1,102 @@
-import { useEffect } from "react";
-import gambar1 from "../../assets/DSC07836.JPG";
-import gambar2 from "../../assets/_DSC7007.JPG";
-import gambar3 from "../../assets/_DSC7009.JPG";
-import gambar4 from "../../assets/_DSC7008.JPG";
-import gambar5 from "../../assets/_DSC7010.JPG";
-import gambar6 from "../../assets/_DSC7014.JPG";
-import gambar7 from "../../assets/_DSC7029.JPG";
-import gambar8 from "../../assets/_DSC7030.JPG";
-import gambar9 from "../../assets/_DSC7031.JPG";
-import gambar10 from "../../assets/_DSC7048.JPG";
-import gambar11 from "../../assets/_DSC7049.JPG";
-import gambar12 from "../../assets/_DSC7052.JPG";
-import gambar13 from "../../assets/_DSC7055.JPG";
-import gambar14 from "../../assets/_DSC7056.JPG";
-import gambar15 from "../../assets/photo-1743701168206-bd617221b559.avif";
+import React from "react";
+
+import gambar1 from "../../assets/z.webp";
+import gambar2 from "../../assets/zz.webp";
+import gambar3 from "../../assets/zzz.webp";
 
 const Galery = () => {
-  const images = [
-    gambar1, gambar2, gambar3, gambar4, gambar5,
-    gambar6, gambar7, gambar8, gambar9, gambar10,
-    gambar11, gambar12, gambar13, gambar14, gambar15,
-  ];
-
-  useEffect(() => {
-    const slides = document.querySelector(".gallery-slides");
-    const dots = document.querySelectorAll(".gallery-dot");
-    let current = 0;
-
-    function showSlide(index) {
-      slides.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((d, i) => {
-        d.classList.toggle("bg-blue-500", i === index);
-        d.classList.toggle("bg-blue-200", i !== index);
-        d.classList.toggle("scale-125", i === index);
-      });
-    }
-
-    function nextSlide() {
-      current = (current + 1) % images.length;
-      showSlide(current);
-    }
-
-    showSlide(current);
-    const interval = setInterval(nextSlide, 3000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const images = [gambar1, gambar2, gambar3];
 
   return (
-    <section id="gallery" className="py-16 bg-[#0E0B0C] text-white">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        PHOTO GALLERY
-      </h1>
+    <>
+      {/* Vintage grain + vignette */}
+      <style>
+        {`
+          .grain {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: url("https://grainy-gradients.vercel.app/noise.webp");
+            opacity: .17;
+            mix-blend-mode: soft-light;
+          }
+          .vignette {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 120px rgba(0,0,0,.6);
+          }
+        `}
+      </style>
 
-      <div className="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
-        {/* Slides wrapper */}
-        <div className="gallery-slides flex transition-transform duration-700 ease-in-out w-full h-[450px]">
+      <section className="bg-[#1A1817] text-[#EDE4D8] py-50 px-6 relative">
+        <div className="grain"></div>
+        <div className="vignette"></div>
+
+        {/* Title */}
+        <h1 className="text-center text-4xl font-bold tracking-[0.15em] mb-14 opacity-90">
+          PHOTO GALLERY
+        </h1>
+
+        {/* VINTAGE GRID */}
+        <div className="
+          max-w-7xl mx-auto 
+          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+          gap-10
+        ">
           {images.map((src, i) => (
-            <img
+            <div
               key={i}
-              src={src}
-              alt={`Foto ${i + 1}`}
-              className="w-full flex-shrink-0 object-cover"
-            />
-          ))}
-        </div>
+              className="
+                relative group rounded-xl overflow-hidden
+                border border-[#4F463A]/60 
+                shadow-[0_6px_25px_rgba(0,0,0,0.6)] 
+                bg-[#2A2723]
+                transition-all duration-700
+                hover:scale-[1.02]
+                hover:shadow-[0_12px_45px_rgba(0,0,0,0.8)]
+                p-3                  /* FRAME BIAR FOTO TIDAK KEPOTONG */
+              "
+            >
+              {/* PHOTO – FULL FRAME, NO CROP */}
+              <div className="w-full h-72 bg-[#1F1D1A] rounded-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src={src}
+                  className="
+                    max-w-full max-h-full object-contain 
+                    sepia-[40%] brightness-[92%] contrast-[90%]
+                    transition-all duration-700 ease-out
+                    group-hover:sepia-[20%] group-hover:brightness-[100%]
+                    group-hover:scale-[1.02]
+                  "
+                />
+              </div>
 
-        {/* Dots colorful */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className="gallery-dot w-3 h-3 rounded-full bg-blue-200 transition-all duration-300"
-            ></span>
+              {/* light leak */}
+              <div className="
+                absolute inset-0 
+                bg-gradient-to-r from-transparent via-transparent to-[#ff8c54]/20
+                opacity-0 group-hover:opacity-60
+                transition-all duration-700 mix-blend-screen pointer-events-none
+              "></div>
+
+              {/* caption */}
+              <div className="
+                absolute bottom-0 left-0 right-0
+                bg-gradient-to-t from-black/60 to-transparent
+                p-4 text-sm opacity-0 group-hover:opacity-100
+                transition-all duration-500
+              ">
+                <p className="tracking-wide text-[#EDE4D8]/90">Photo #{i + 1}</p>
+              </div>
+
+              {/* grain */}
+              <div className="grain"></div>
+            </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

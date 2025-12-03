@@ -1,9 +1,9 @@
-import gambar from "../../assets/download-removebg-preview.png";
+
 const Footer = () => {
   return (
     <div className="bg-[#0E0B0C] text-white">
       <footer className="bg-[#0E0B0C] text-gray-200">
-        <div className="container mx-auto px-6 py-12 grid grid-cols-1 gap-10 md:grid-cols-5">
+        <div className="container mx-auto px-6 py-20 grid grid-cols-1 gap-10 md:grid-cols-5">
 
           <div className="md:col-span-2 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Portofolio</h2>

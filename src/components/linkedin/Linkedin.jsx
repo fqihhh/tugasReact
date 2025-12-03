@@ -1,8 +1,8 @@
-import gambar from "../../assets/download-removebg-preview.png";
+
 const Hero = () => {
   return (
     <div className="bg-[#0E0B0C] text-white">
-        <section className="py-16 text-center bg-[#0E0B0C] text-white px-6">
+        <section className="py-40 text-center bg-[#0E0B0C] text-white px-6">
       <h2 className="text-2xl md:text-3xl font-bold mb-4">Connect with me on LinkedIn</h2>
       <p className="text-white mb-6">
         See my complete experience, projects, and professional network on LinkedIn. Let's connect and collaborate.
