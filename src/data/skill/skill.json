@@ -1,0 +1,6 @@
+{
+  "topImages": ["k.webp", "b.webp", "m.webp"],
+  "title": ["MY", "SKILL"],
+  "skillsLeft": ["HTML", "CSS", "JAVASCRIPT", "TAILWIND.CSS", "REACT"],
+  "skillsRight": ["TINKERCAT", "SCRATCH", "WORDPRESS", "FIGMA"]
+}
