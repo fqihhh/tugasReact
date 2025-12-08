@@ -1,19 +1,30 @@
+import { useContext } from "react";
+import { LangContext } from "../../Language/Language.jsx";
+import LinkedinData from "../../data/Linkedin/Linkedin.json";
 
-const Hero = () => {
+const Linkedin = () => {
+  const { t } = useContext(LangContext);
+
   return (
-    <div className="bg-[#0E0B0C] text-white">
-        <section className="py-40 text-center bg-[#0E0B0C] text-white px-6">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">Connect with me on LinkedIn</h2>
-      <p className="text-white mb-6">
-        See my complete experience, projects, and professional network on LinkedIn. Let's connect and collaborate.
-      </p>
-      <a href="https://www.linkedin.com/in/arsyad-faqih-alhisyami-005628377/" target="_blank"
-        className="bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-900 transition">
-        Visit LinkedIn
-      </a>
-    </section>
+    <div className="bg-[#0E0B0C] text-white w-full md:w-2/3 rounded-lg shadow-lg mx-auto">
+      <section className="py-20 text-center px-6">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          {t(LinkedinData.title.id, LinkedinData.title.en)}
+        </h2>
+        <p className="mb-6">
+          {t(LinkedinData.description.id, LinkedinData.description.en)}
+        </p>
+        <a
+          href={LinkedinData.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors duration-300"
+        >
+          {t(LinkedinData.buttonText.id, LinkedinData.buttonText.en)}
+        </a>
+      </section>
     </div>
   );
 };
 
-export default Hero;
+export default Linkedin;

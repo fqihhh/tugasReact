@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import data from "../../data/skill/skill.json";
+import { LangContext } from "../../Language/Language";
 
-// Manual import image agar Vite bisa bundling
+// import gambar
 import img1 from "../../assets/k.webp";
 import img2 from "../../assets/b.webp";
 import img3 from "../../assets/m.webp";
@@ -13,13 +14,22 @@ const imageMap = {
 };
 
 export default function MySkill() {
+ const { lang } = useContext(LangContext);
+const language = lang; // biar kompatibel
+
+
+  // Safety: kalau data atau bahasa error → tampil kosong, tapi tidak crash
+  const title = data.title?.[language] || [];
+  const left = data.skillsLeft?.[language] || [];
+  const right = data.skillsRight?.[language] || [];
+
   return (
     <section className="w-full bg-black text-white py-50 px-6 md:px-20">
 
       {/* TOP IMAGES */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-20">
-        {data.topImages.map((name, i) => (
-          <img 
+        {data.topImages?.map((name, i) => (
+          <img
             key={i}
             src={imageMap[name]}
             className="w-full h-52 sm:h-64 object-cover"
@@ -32,7 +42,7 @@ export default function MySkill() {
         {/* LEFT TITLE */}
         <div className="text-left font-extrabold leading-none tracking-tight 
                         text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-          {data.title.map((t, i) => (
+          {title.map((t, i) => (
             <h1 key={i}>{t}</h1>
           ))}
         </div>
@@ -42,13 +52,13 @@ export default function MySkill() {
                         text-2xl sm:text-3xl font-semibold">
 
           <ul className="space-y-3">
-            {data.skillsLeft.map((s, i) => (
+            {left.map((s, i) => (
               <li key={i}>- {s}</li>
             ))}
           </ul>
 
           <ul className="space-y-3">
-            {data.skillsRight.map((s, i) => (
+            {right.map((s, i) => (
               <li key={i}>- {s}</li>
             ))}
           </ul>

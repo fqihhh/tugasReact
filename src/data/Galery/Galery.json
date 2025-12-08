@@ -1,0 +1,10 @@
+{
+  "title": {
+    "id": "GALERI FOTO",
+    "en": "PHOTO GALLERY"
+  },
+  "captions": {
+    "id": ["Foto 1", "Foto 2", "Foto 3"],
+    "en": ["Photo 1", "Photo 2", "Photo 3"]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "Linkedin",
+  "title": {
+    "id": "Terhubung dengan saya di LinkedIn",
+    "en": "Connect with me on LinkedIn"
+  },
+  "description": {
+    "id": "Lihat pengalaman lengkap saya, proyek, dan jaringan profesional saya di LinkedIn. Ayo terhubung dan berkolaborasi.",
+    "en": "See my complete experience, projects, and professional network on LinkedIn. Let's connect and collaborate."
+  },
+  "buttonText": {
+    "id": "Kunjungi LinkedIn",
+    "en": "Visit LinkedIn"
+  },
+  "linkedinUrl": "https://www.linkedin.com/in/arsyad-faqih-alhisyami-005628377/"
+}

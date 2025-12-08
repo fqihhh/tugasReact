@@ -1,6 +1,15 @@
 {
-  "topImages": ["k.webp", "b.webp", "m.webp"],
-  "title": ["MY", "SKILL"],
-  "skillsLeft": ["HTML", "CSS", "JAVASCRIPT", "TAILWIND.CSS", "REACT"],
-  "skillsRight": ["TINKERCAT", "SCRATCH", "WORDPRESS", "FIGMA"]
+  "title": {
+    "en": ["My", "Skill"],
+    "id": ["Keahlian", "Saya"]
+  },
+  "skillsLeft": {
+    "id": ["HTML", "CSS", "JS"],
+    "en": ["HTML", "CSS", "JS"]
+  },
+  "skillsRight": {
+    "id": ["React", "Tailwind", "Next"],
+    "en": ["React", "Tailwind", "Next"]
+  },
+  "topImages": ["k.webp", "b.webp", "m.webp"]
 }

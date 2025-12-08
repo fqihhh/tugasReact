@@ -6,18 +6,18 @@ import Navbar from "./components/navbar/Navbar";
 import Galery from "./components/galery/Galery";      
 import Skill from "./components/skill/Skill";    
 import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react"; 
+import { useEffect } from "react";
+import { LangProvider } from "./Language/Language";
 
 function App() {
   useEffect(() => {
- const lenis = new Lenis({
-  duration: 0.28,
-  easing: (t) => 1 - Math.pow(1 - t, 3), // smooooth tapi ringan
-  smoothWheel: true,
-  smoothTouch: true,
-  wheelMultiplier: 0.8,
-});
-
+    const lenis = new Lenis({
+      duration: 0.28,
+      easing: (t) => 1 - Math.pow(1 - t, 3), // smooooth tapi ringan
+      smoothWheel: true,
+      smoothTouch: true,
+      wheelMultiplier: 0.8,
+    });
 
     function raf(time) {
       lenis.raf(time);
@@ -27,9 +27,9 @@ function App() {
     requestAnimationFrame(raf);
   }, []);
 
-
   return (
     <>
+    <LangProvider>
       <Navbar />
       <Hero />
       <Featured />
@@ -37,7 +37,7 @@ function App() {
       <Galery />  
       <Linkedin />
       <Footer />
-    
+    </LangProvider>
     </> 
   );
 }
