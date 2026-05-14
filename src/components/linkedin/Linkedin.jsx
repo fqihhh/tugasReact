@@ -6,7 +6,7 @@ const Linkedin = () => {
   const { t } = useContext(LangContext);
 
   return (
-    <div className="bg-[#0E0B0C] text-white w-full md:w-2/3 rounded-lg shadow-lg mx-auto">
+    <div className="bg-[#0E0B0C] text-white w-full rounded-lg shadow-lg mx-auto">
       <section className="py-20 text-center px-6">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
           {t(LinkedinData.title.id, LinkedinData.title.en)}
