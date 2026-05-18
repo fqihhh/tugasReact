@@ -5,8 +5,8 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Galery from "./components/galery/Galery";      
 import Skill from "./components/skill/Skill";  
-// 1. Ubah nama import menjadi Sertifikat (Huruf Kapital)
-import Sertifikat from "./components/Sertifikat/Sertifikat";  
+// FIX: Path disesuaikan dengan file asli 'src/components/sertifikat.jsx'
+import Sertifikat from "./components/sertifikat";  
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import { LangProvider } from "./Language/Language";
@@ -36,11 +36,9 @@ function App() {
       <Hero />
       <Featured />
       <Skill />
-            <Sertifikat />
-
+      <Sertifikat />
       <Galery />  
       <Linkedin />
-      {/* 2. Komponen Sertifikat dipanggil di sini dengan Huruf Kapital */}
       <Footer />
     </LangProvider>
     </> 
