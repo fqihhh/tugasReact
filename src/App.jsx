@@ -5,7 +5,6 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Galery from "./components/galery/Galery";      
 import Skill from "./components/skill/Skill";  
-// FIX: Path disesuaikan dengan file asli 'src/components/sertifikat.jsx'
 import Sertifikat from "./components/Sertifikat/Sertifikat";  
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
