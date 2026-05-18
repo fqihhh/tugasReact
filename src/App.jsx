@@ -5,7 +5,8 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Galery from "./components/galery/Galery";      
 import Skill from "./components/skill/Skill";  
-import Sertifikat from "./components/Sertifikat/Sertifikat";  
+// Ganti baris ke-8 di App.jsx lo menjadi seperti ini:
+import Sertifikat from "./components/sertifikat/Sertifikat";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import { LangProvider } from "./Language/Language";
