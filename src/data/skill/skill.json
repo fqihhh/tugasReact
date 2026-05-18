@@ -8,8 +8,8 @@
     "en": ["HTML", "CSS", "JS"]
   },
   "skillsRight": {
-    "id": ["React", "Tailwind", "Next"],
-    "en": ["React", "Tailwind", "Next"]
+    "id": ["React", "Tailwind", "Github"],
+    "en": ["React", "Tailwind", "Github"]
   },
   "topImages": ["k.webp", "b.webp", "m.webp"]
 }
