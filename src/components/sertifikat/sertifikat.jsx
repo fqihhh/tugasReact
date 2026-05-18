@@ -6,7 +6,7 @@ import jsImg from '../../assets/JS DASAR.jpg';
 import tsImg from '../../assets/TypeScript Dasar.jpg';
 import gitImg from '../../assets/Git & GitHub Dasar.jpg';
 
-const Sertifikat = () => {
+export default function Navbar(){
   // Data list sertifikat yang disesuaikan secara akurat dari gambar yang Anda unggah
   const listSertifikat = [
     {
@@ -91,5 +91,3 @@ const Sertifikat = () => {
     </section>
   );
 };
-
-export default Sertifikat;
